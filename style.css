@@ -1,0 +1,16 @@
+.titulo{
+    margin-top: 0.5em;
+}
+
+.opener{
+    
+    padding-bottom: 1em;
+}
+
+.fotoportada{
+    background-image: url("./assets/190815-Imagenes-OMWD-semana-12-al-16_Noticia-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
