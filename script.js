@@ -19,7 +19,6 @@ $("div.col").click(function () {
     $("div.col").addClass("bg-primary");
     $(this).removeClass("bg-primary")
     $(this).addClass("selected");
-    
- 
+
 });
 
