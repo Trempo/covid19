@@ -5,7 +5,7 @@
 //     console.log($(this));
 // });
 
-$("div.col").hover(function () {
+$("div.col-sm").hover(function () {
     if (!$(this).hasClass("selected")) {
         $(this).toggleClass("hovered");
         $(this).toggleClass("bg-primary");
@@ -14,9 +14,9 @@ $("div.col").hover(function () {
 });
 
 
-$("div.col").click(function () {
-    $("div.col").removeClass("selected");
-    $("div.col").addClass("bg-primary");
+$("div.col-sm").click(function () {
+    $("div.col-sm").removeClass("selected");
+    $("div.col-sm").addClass("bg-primary");
     $(this).removeClass("bg-primary")
     $(this).addClass("selected");
 

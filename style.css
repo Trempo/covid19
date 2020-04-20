@@ -16,7 +16,7 @@
     margin-bottom: 2em;
 }
 
-.col{
+.col-sm{
     color: white;
     text-align: center;
     display: flex;
@@ -28,12 +28,14 @@
     transition: background-color 0.3s ease;
 }
 
-.col:nth-of-type(1){
-    border-radius: 15px 0 0 15px;
-}
-.col:last-of-type{
-    border-radius: 0 15px 15px 0;
-}
+@media (min-width: 541px){
+    .col-sm:nth-of-type(1){
+        border-radius: 15px 0 0 15px;
+    }
+    .col-sm:last-of-type{
+        border-radius: 0 15px 15px 0;
+    }
+} 
 
 
 .row{
