@@ -56,6 +56,10 @@ table{
     font-size: 20px;
 }
 
+.selected{
+    background-color: #7ee077;
+}
+
 
 
 
