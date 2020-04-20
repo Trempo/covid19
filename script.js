@@ -6,8 +6,19 @@
 // });
 
 $("div.col").hover(function () {
-    $(this).toggleClass("hovered");
-    $(this).toggleClass("bg-primary");
+    if (!$(this).hasClass("selected")) {
+        $(this).toggleClass("hovered");
+        $(this).toggleClass("bg-primary");
+    }
+
+});
+
+
+$("div.col").click(function () {
+    $("div.col").removeClass("selected");
+    $("div.col").addClass("bg-primary");
+    $(this).removeClass("bg-primary")
+    $(this).addClass("selected");
     
  
 });
