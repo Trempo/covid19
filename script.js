@@ -59,10 +59,19 @@ $("div.col-sm").click(function () {
     if ($(this).parent().hasClass("placa")) {
         placa = parseInt($(this).text());
     }
+
+    lunes.carro=false, lunes.salir=false;
+    martes.carro=false, martes.salir=false;
+    miercoles.carro=false, miercoles.salir=false;
+    jueves.carro=false, jueves.salir=false;
+    viernes.carro=false, viernes.salir=false;
+    sabado.carro=false, sabado.salir=false;
+    domingo.carro=false, domingo.salir=false;
+
     if (numeroCedula !== undefined && placa !== undefined) {
 
         //por ultimo digito placa
-        lunes, martes, miercoles, jueves, viernes, sabado, domingo = 0;
+        
         if (placa % 2 === 0) {
             martes.carro = true;
             jueves.carro = true;
@@ -95,14 +104,107 @@ $("div.col-sm").click(function () {
         //limpia toda la informacion de dias en configuraciones anteriores y asigna nuevas
         $("tr").each((index, element) => {
             element.classList.remove("bg-primary", "bg-secondary");
+            
 
             if(element.id==="lunes"){
                 if (lunes.salir==true){
                     element.classList.add("bg-primary");
+                    if(lunes.carro==true){
+                        element.childNodes[3].innerHTML ='Lunes<span class="iconSpan"><i class="fas fa-car"></i>Puedes salir en tu carro</span>';
+                    }else{
+                        element.childNodes[3].innerHTML = 'Lunes<span class="iconSpan"><i class="fas fa-walking"></i>Puedes salir sin tu carro</span>';
+                    }
+                    
                 }else{
                     element.classList.add("bg-secondary");
+                    element.childNodes[3].innerHTML = 'Lunes<span class="iconSpan"><i class="fas fa-times-circle"></i>Debes quedarte en casa</span>';
                 }
             }
+            if(element.id==="martes"){
+                if (martes.salir==true){
+                    element.classList.add("bg-primary");
+                    if(martes.carro==true){
+                        element.childNodes[3].innerHTML ='Martes<span class="iconSpan"><i class="fas fa-car"></i>Puedes salir en tu carro</span>';
+                    }else{
+                        element.childNodes[3].innerHTML = 'Martes<span class="iconSpan"><i class="fas fa-walking"></i>Puedes salir sin tu carro</span>';
+                    }
+                    
+                }else{
+                    element.classList.add("bg-secondary");
+                    element.childNodes[3].innerHTML = 'Martes<span class="iconSpan"><i class="fas fa-times-circle"></i>Debes quedarte en casa</span>';
+                }
+            }
+            if(element.id==="miercoles"){
+                if (miercoles.salir==true){
+                    element.classList.add("bg-primary");
+                    if(miercoles.carro==true){
+                        element.childNodes[3].innerHTML ='Miercoles<span class="iconSpan"><i class="fas fa-car"></i>Puedes salir en tu carro</span>';
+                    }else{
+                        element.childNodes[3].innerHTML = 'Miercoles<span class="iconSpan"><i class="fas fa-walking"></i>Puedes salir sin tu carro</span>';
+                    }
+                    
+                }else{
+                    element.classList.add("bg-secondary");
+                    element.childNodes[3].innerHTML = 'Miercoles<span class="iconSpan"><i class="fas fa-times-circle"></i>Debes quedarte en casa</span>';
+                }
+            }
+            if(element.id==="jueves"){
+                if (jueves.salir==true){
+                    element.classList.add("bg-primary");
+                    if(jueves.carro==true){
+                        element.childNodes[3].innerHTML ='Jueves<span class="iconSpan"><i class="fas fa-car"></i>Puedes salir en tu carro</span>';
+                    }else{
+                        element.childNodes[3].innerHTML = 'Jueves<span class="iconSpan"><i class="fas fa-walking"></i>Puedes salir sin tu carro</span>';
+                    }
+                    
+                }else{
+                    element.classList.add("bg-secondary");
+                    element.childNodes[3].innerHTML = 'Jueves<span class="iconSpan"><i class="fas fa-times-circle"></i>Debes quedarte en casa</span>';
+                }
+            }
+            if(element.id==="viernes"){
+                if (viernes.salir==true){
+                    element.classList.add("bg-primary");
+                    if(viernes.carro==true){
+                        element.childNodes[3].innerHTML ='Viernes<span class="iconSpan"><i class="fas fa-car"></i>Puedes salir en tu carro</span>';
+                    }else{
+                        element.childNodes[3].innerHTML = 'Viernes<span class="iconSpan"><i class="fas fa-walking"></i>Puedes salir sin tu carro</span>';
+                    }
+                    
+                }else{
+                    element.classList.add("bg-secondary");
+                    element.childNodes[3].innerHTML = 'Viernes<span class="iconSpan"><i class="fas fa-times-circle"></i>Debes quedarte en casa</span>';
+                }
+            }
+            if(element.id==="sabado"){
+                if (sabado.salir==true){
+                    element.classList.add("bg-primary");
+                    if(sabado.carro==true){
+                        element.childNodes[3].innerHTML ='Sabado<span class="iconSpan"><i class="fas fa-car"></i>Puedes salir en tu carro</span>';
+                    }else{
+                        element.childNodes[3].innerHTML = 'Sabado<span class="iconSpan"><i class="fas fa-walking"></i>Puedes salir sin tu carro</span>';
+                    }
+                    
+                }else{
+                    element.classList.add("bg-secondary");
+                    element.childNodes[3].innerHTML = 'Sabado<span class="iconSpan"><i class="fas fa-times-circle"></i>Debes quedarte en casa</span>';
+                }
+            }
+            if(element.id==="domingo"){
+                if (domingo.salir==true){
+                    element.classList.add("bg-primary");
+                    if(domingo.carro==true){
+                        element.childNodes[3].innerHTML ='Domingo<span class="iconSpan"><i class="fas fa-car"></i>Puedes salir en tu carro</span>';
+                    }else{
+                        element.childNodes[3].innerHTML = 'Domingo<span class="iconSpan"><i class="fas fa-walking"></i>Puedes salir sin tu carro</span>';
+                    }
+                    
+                }else{
+                    element.classList.add("bg-secondary");
+                    element.childNodes[3].innerHTML = 'Domingo<span class="iconSpan"><i class="fas fa-times-circle"></i>Debes quedarte en casa</span>';
+                }
+            }
+            
               
         });
         
