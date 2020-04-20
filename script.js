@@ -72,7 +72,7 @@ $("div.col-sm").click(function () {
 
         //por ultimo digito placa
         
-        if (placa % 2 === 0) {
+        if (placa % 2 !== 0) {
             martes.carro = true;
             jueves.carro = true;
             sabado.carro = true;
